@@ -26,7 +26,7 @@
     /* Container do Cartão Responsivo */
     .card {
       width: 100%;
-      max-width: 440px; /* Largura ideal para desktop/tablet */
+      max-width: 440px;
       background: #ffffff;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.08);
@@ -34,7 +34,7 @@
       transition: all 0.3s ease;
     }
 
-    /* Cabeçalho */
+    /* Cabeçalho com fundo azul */
     .header {
       background: linear-gradient(135deg, #4b7bec, #3867d6);
       color: #ffffff;
@@ -42,32 +42,53 @@
       padding: 32px 20px 24px;
     }
 
-    .avatar {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      background: #ffffff;
-      margin: 0 auto 16px;
+    /* Container do Logótipo Transparente */
+    .logo-container {
+      width: 100%;
+      max-width: 220px;
+      margin: 0 auto 20px;
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 3px solid rgba(255, 255, 255, 0.3);
+      padding: 0;
+      background: transparent;
+      box-shadow: none;
     }
 
-    .avatar i {
-      font-size: 38px;
-      color: #3867d6;
+    .logo-container img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* Foto de Perfil */
+    .avatar-container {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      background-color: #ffffff;
+    }
+
+    .avatar-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .header h1 {
       font-size: 1.4rem;
       font-weight: 700;
       margin-bottom: 4px;
+      color: #ffffff;
     }
 
     .header .cargo {
       font-size: 0.9rem;
-      opacity: 0.9;
+      color: rgba(255, 255, 255, 0.85);
       font-weight: 400;
     }
 
@@ -108,7 +129,7 @@
       border: 1px solid #edf0f2;
       transition: background 0.2s ease, transform 0.1s ease;
       text-align: center;
-      word-break: break-word; /* Evita que emails longos quebrem o layout em ecrãs pequenos */
+      word-break: break-word;
     }
 
     .btn:hover {
@@ -121,9 +142,26 @@
     }
 
     .btn i {
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: #3867d6;
       flex-shrink: 0;
+    }
+
+    /* Botão Destaque do WhatsApp */
+    .btn-whatsapp {
+      background: #25D366;
+      color: #ffffff;
+      border: none;
+      font-weight: 600;
+    }
+
+    .btn-whatsapp:hover {
+      background: #20ba5a;
+      border-color: transparent;
+    }
+
+    .btn-whatsapp i {
+      color: #ffffff;
     }
 
     .btn-primary {
@@ -140,7 +178,7 @@
       color: #ffffff;
     }
 
-    /* Endereço e Mapa */
+    /* Endereço */
     .address-card {
       background: #f8f9fa;
       border: 1px solid #edf0f2;
@@ -150,7 +188,7 @@
       gap: 10px;
       align-items: center;
       justify-content: center;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       text-align: center;
     }
 
@@ -166,22 +204,6 @@
       line-height: 1.4;
     }
 
-    .mapa-container {
-      width: 100%;
-      height: 160px;
-      border-radius: 12px;
-      overflow: hidden;
-      margin-bottom: 16px;
-      border: 1px solid #edf0f2;
-    }
-
-    .mapa-container iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    /* MEDIA QUERIES (Ajustes para ecrãs muito pequenos / Telemóveis) */
     @media (max-width: 380px) {
       body {
         padding: 8px;
@@ -205,25 +227,31 @@
 <body>
 
   <div class="card">
-    <!-- Cabeçalho -->
     <header class="header">
-      <div class="avatar">
-        <i class="fa-regular fa-user"></i>
+      <!-- Logótipo Transparente -->
+      <div class="logo-container">
+        <img src="ffggghj-removebg-preview.png" alt="Triónica Moçambique">
       </div>
-      <h1>Suneila Canudo</h1>
-      <p class="cargo">Administradora</p>
+
+      <!-- Foto da Pessoa -->
+      <div class="avatar-container">
+        <img src="perfil.jpg" alt="Suneila Chin">
+      </div>
+
+      <h1>Suneila Chin</h1>
+      <p class="cargo">Administrator</p>
     </header>
 
-    <!-- Conteúdo -->
     <main class="content">
-      
       <!-- Contatos Diretos -->
-      <div class="section-title">Contato Direto</div>
+      <div class="section-title">Contacto Pessoal</div>
+      
+      <a href="https://wa.me/258846554229" target="_blank" class="btn btn-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp: +258 84 655 4229
+      </a>
+
       <a href="tel:+258827455040" class="btn">
         <i class="fa-solid fa-phone"></i> +258 82 745 5040
-      </a>
-      <a href="tel:+258846554229" class="btn">
-        <i class="fa-solid fa-mobile-screen"></i> +258 84 655 4229
       </a>
       <a href="mailto:schin@trionicamz.com" class="btn">
         <i class="fa-regular fa-envelope"></i> schin@trionicamz.com
@@ -248,24 +276,19 @@
         <p>Bairro da Costa do Sol, Av. Major General Candido Mondlane, N°2007</p>
       </div>
 
-      <div class="mapa-container">
-        <iframe
-          src="https://www.google.com/maps?q=Av.+Major+General+Candido+Mondlane,+Maputo,+Mozambique&output=embed"
-          allowfullscreen
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
+      <!-- Botão para abrir o Google Maps numa nova aba/app -->
+      <a href="https://www.google.com/maps/search/?api=1&query=Av.+Major+General+Candido+Mondlane,+Maputo,+Mozambique" target="_blank" class="btn">
+        <i class="fa-solid fa-map-location-dot"></i> Abrir no Google Maps
+      </a>
 
       <!-- Mais Informações -->
       <div class="section-title">Mais Informações</div>
-      <a href="https://www.trionica.co.mz/" target="_blank" class="btn btn-primary">
-        <i class="fa-solid fa-globe"></i> Nosso Website
+      <a href="https://trionicamz.com" target="_blank" class="btn btn-primary">
+        <i class="fa-solid fa-globe"></i>Visite o nosso Website
       </a>
       <a href="about.pdf" target="_blank" class="btn">
         <i class="fa-regular fa-file-pdf"></i> Sobre Nós (PDF)
       </a>
-
     </main>
   </div>
 
