@@ -3,53 +3,242 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Suneila Chin - LinkPage</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Suneila Chin - Cartão Digital</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f0f2f5;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+
+    /* Cabeçalho */
+    .header {
+      background: linear-gradient(135deg, #4b7bec, #3867d6);
+      color: #ffffff;
+      text-align: center;
+      padding: 32px 20px 24px;
+    }
+
+    .avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: #ffffff;
+      margin: 0 auto 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      object-fit: cover;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .avatar i {
+      font-size: 38px;
+      color: #3867d6;
+    }
+
+    .header h1 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .header .cargo {
+      font-size: 14px;
+      opacity: 0.9;
+      font-weight: 400;
+    }
+
+    /* Conteúdo Principal */
+    .content {
+      padding: 24px 20px;
+    }
+
+    .section-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #888;
+      font-weight: 700;
+      margin: 16px 0 10px;
+      text-align: center; /* Títulos das seções também centralizados */
+    }
+
+    .section-title:first-of-type {
+      margin-top: 0;
+    }
+
+    /* Botões / Links com conteúdo centralizado */
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Centralização do conteúdo */
+      gap: 10px;
+      width: 100%;
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      background: #f8f9fa;
+      color: #2d3436;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid #edf0f2;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .btn:hover {
+      background: #edf2f7;
+      border-color: #cbd5e1;
+    }
+
+    .btn i {
+      font-size: 16px;
+      color: #3867d6;
+    }
+
+    .btn-primary {
+      background: #3867d6;
+      color: #ffffff;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: #2b55b7;
+    }
+
+    .btn-primary i {
+      color: #ffffff;
+    }
+
+    /* Endereço e Mapa */
+    .address-card {
+      background: #f8f9fa;
+      border: 1px solid #edf0f2;
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .address-card i {
+      font-size: 16px;
+      color: #3867d6;
+    }
+
+    .address-card p {
+      font-size: 13px;
+      color: #2d3436;
+      line-height: 1.4;
+    }
+
+    .mapa-container {
+      width: 100%;
+      height: 160px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 16px;
+      border: 1px solid #edf0f2;
+    }
+
+    .mapa-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="container">
+  <div class="card">
+    <!-- Cabeçalho -->
+    <header class="header">
+      <div class="avatar">
+        <i class="fa-regular fa-user"></i>
+      </div>
+      <h1>Suneila Chin</h1>
+      <p class="cargo">Administradora</p>
+    </header>
 
-    <!-- Logo -->
-    <img src="logo.png" alt="Logo" class="logo" />
+    <!-- Conteúdo -->
+    <main class="content">
+      
+      <!-- Contatos Diretos Centralizados -->
+      <div class="section-title">Contato Direto</div>
+      <a href="tel:+258827455040" class="btn">
+        <i class="fa-solid fa-phone"></i> +258 82 745 5040
+      </a>
+      <a href="tel:+258846554229" class="btn">
+        <i class="fa-solid fa-mobile-screen"></i> +258 84 655 4229
+      </a>
+      <a href="mailto:schin@trionicamz.com" class="btn">
+        <i class="fa-regular fa-envelope"></i> schin@trionicamz.com
+      </a>
 
-    <!-- Nome e cargo -->
-    <h1>Suneila Chin</h1>
-    <p class="cargo">Administrator</p>
+      <!-- Empresa / Geral Centralizado -->
+      <div class="section-title">Geral / Empresa</div>
+      <a href="tel:+258846974444" class="btn">
+        <i class="fa-solid fa-headset"></i> +258 84 697 4444
+      </a>
+      <a href="tel:+258820660201" class="btn">
+        <i class="fa-solid fa-headset"></i> +258 82 066 0201
+      </a>
+      <a href="mailto:geral@trionicamz.com" class="btn">
+        <i class="fa-regular fa-paper-plane"></i> geral@trionicamz.com
+      </a>
 
-    <!-- Telefones Pessoais -->
-    <a href="tel:+258827455040" class="btn"> +258 827455040</a>
-    <a href="tel:+258846554229" class="btn"> +258 846554229</a>
-    
+      <!-- Endereço e Localização -->
+      <div class="section-title">Localização</div>
+      <div class="address-card">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>Bairro da Costa do Sol, Av. Major General Candido Mondlane, N°2007</p>
+      </div>
 
-    <!-- Email Pessoal -->
-    <a href="mailto:schin@trionicamz.com" class="btn"> schin@trionicamz.com</a>
+      <div class="mapa-container">
+        <iframe
+          src="https://www.google.com/maps?q=Av.+Major+General+Candido+Mondlane,+Maputo,+Mozambique&output=embed"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
 
-    <!-- Endereço -->
-    <p class="endereco"> Bairro da Costa do Sol ,Av. Major General Candido Mondlane, N°2007</p>
- 
+      <!-- Links Externos -->
+      <div class="section-title">Mais Informações</div>
+      <a href="https://www.trionica.co.mz/" target="_blank" class="btn btn-primary">
+        <i class="fa-solid fa-globe"></i> Nosso Website
+      </a>
+      <a href="about.pdf" target="_blank" class="btn">
+        <i class="fa-regular fa-file-pdf"></i> Sobre Nós (PDF)
+      </a>
 
-    <!-- Mapa -->
-    <div class="mapa-container">
-      <iframe
-        src="https://www.google.com/maps?q=Av.+Major+General+Candido+Mondlane,+Maputo,+Mozambique&output=embed"
-        allowfullscreen
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-    <!-- Telefones Gerais -->
-    <a href="tel:+258846974444" class="btn"> +258 846974444</a>
-    <a href="tel:+258820660201" class="btn"> +258 820660201</a>
-
-    <!-- Email Geral -->
-    <a href="mailto:geral@trionicamz.com" class="btn"> geral@trionicamz.com</a>
-
-    <!-- Links -->
-    <a href="https://trionicamz.com" target="_blank" class="btn"> OUR WEBSITE</a>
-  <!-- Link para o PDF Sobre Nós -->
-<a href="about.pdf" class="btn" target="_blank">About us!</a>
-
+    </main>
   </div>
 
 </body>
